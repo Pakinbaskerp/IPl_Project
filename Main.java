@@ -274,7 +274,13 @@ public class Main {
 
             }
             for (String item : set) {
-                over.put(item, (double) ball.get(item) / 6);
+                int up=ball.get(item)/6;
+                int down=ball.get(item)%6;
+                String value=up+"."+down;
+                double dd=Double.parseDouble(value);
+
+
+                over.put(item, dd);
             }
             for (String item : set) {
                 economy.put(item, (double) (hm.get(item) / over.get(item)));
